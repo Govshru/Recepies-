@@ -15,9 +15,9 @@ const Navbar = () => {
         <a href='/' className='logo'>Logo</a>
         <nav className='navbar'>
           {/* Correctly passing route to the handleRedirect function */}
-          <button onClick={() => handleRedirect('/')}>Home</button>
-          <button onClick={() => handleRedirect('/Aboutus')}>About</button>
-          <button onClick={() => handleRedirect('/contact')}>Contact</button>
+          <a href="/" onClick={() => handleRedirect('/')}>Home</a>
+          <a  href="/Aboutus" onClick ={() => handleRedirect('/Aboutus')}>About</a>
+          <a href ="/Contact" onClick={() => handleRedirect('/contact')}>Contact</a>
         </nav>
       </header>
     </div>

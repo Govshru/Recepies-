@@ -18,11 +18,11 @@ a{
     left: 0;
     width: 100%;
     padding: 10px 10%;
-    background-color: blue;
+    background-color: rgb(51, 0, 255);
     display: flex;
     justify-content:space-between;
     align-items: center;
-    z-index: 80;
+    
 }
 
 .logo{
@@ -40,8 +40,75 @@ a{
 
 }
 
+.navbar a::before{
+    content:'';
+    position:absolute;
+    top:100%;
+    left: 0;
+    width:0;
+    height:2px;
+    background:whitesmoke;
+    transition:0.3s ;
+}
+
+.navbar a:hover::before{
+width:100%;
+
+}
+
 .recipeListWapper{
     display: grid;
     gap:15px;
+    padding: 9px;
     grid-template-columns:repeat(4,1fr);
+    justify-content: center;
+    margin: auto;
+    margin-top:44px;
+    border-radius: 6px;
+    background:lightblue;
+
 }
+
+.Button{
+    width: 60px;
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.yesbutton{
+    margin-left: 20%;
+    color: blue;
+    height: 5%;
+    width: 20%;
+}
+
+.img{
+    width: 100px; 
+  height: auto; 
+  margin-right: 20px;
+}
+
+.mealInfo img{
+    width: 400px;
+    height: 400px;
+    border-radius: 11px;
+   }
+
+
+   .mealInfo {
+    /* width: 90%; */
+    height: 90vh;
+    margin: auto;
+    display: flex;
+    gap:22px;
+    justify-content:center ;
+    align-items: center;
+    background-color: rgb(211, 241, 252);
+    padding: 32px;
+   }
+
+   

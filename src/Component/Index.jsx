@@ -1,6 +1,7 @@
 import React from 'react'
 import {useEffect,useState} from 'react'
 import Recepies from './Recepies.jsx';
+import Navbar from './Navbar.jsx';
 
 
 
@@ -41,21 +42,22 @@ const[error,setError]=useState(null);
   
 
   if(loading){
-    return<div>Loading......</div>;
+    return<div className="loading">Loading......</div>;
   }
 
   if(error){
-    return<div>{error}</div>
+    return<div className="error">{error}</div>
   }
   return (
-    <div >
+    <div  className="index-container">
       
       <h1>Recipe List</h1>
       <div className="recipeListWapper">
         {recipes.map((recipe) => (
-          <div key={recipe.id} >
+          <div key={recipe.id} className="recipe-item">
             <strong>{Recepies.title}</strong>
             <Recepies id={recipe.id} name={recipe.name} image={recipe.image}  />
+            <Navbar/>
             
             
 
